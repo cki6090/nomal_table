@@ -4,9 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css" />
+
     <title>Document</title>
 </head>
 <body>
-    
+    <style>
+        .ntxt{font-weight: 400;font-size: 14px; color: #111827;}
+        .ntxt strong{font-weight: 600; color: #111827;}
+        .btxt{font-weight: 600;font-size: 14px;color: #111827;}
+        .stxt{font-weight: 400;font-size: 13px; color: #6B7280;}
+        .stxt strong{font-weight: 600;}
+        .sbtxt{font-weight: 600;font-size: 13px; color: #6B7280;}
+        
+
+        .n_Table{border-collapse: collapse; width: 1650px; table-layout: fixed; margin: 100px auto; border: 1px solid #E0E0E0  ;}
+        .n_Table tr td:nth-child(4){width: 875px;}
+
+        .n_Table thead{ background: #F0F2F6;}
+        .n_Table thead tr td{padding:21px 12px;  position: relative; text-align: center;font-weight: 600; font-size: 14px;}
+        .n_Table thead tr td::after{content: ""; position: absolute; top: 16px; right: -1px; background: #E0E0E0; width: 1px; height: 30px;}
+        .n_Table thead tr td .t_arr{margin: 0 40px;}
+
+        
+        .n_Table tbody{background: #ffffff;}
+        .n_Table tbody tr td{height: 80px; position: relative; padding: 0px 20px;}
+        .route ul{ display: flex; justify-content: space-between; flex-wrap: wrap; }
+        .route ul li p:nth-child(2){margin-top: 5px;}
+        .route ul li:nth-child(2){text-align: center; background: url(/img/l_arr.png)no-repeat center 7px; width: 305px;}
+        .route ul li:nth-child(2) p:nth-child(1){background: #ffffff;display: inline-block; padding: 0px 8px;} 
+        .route ul li:nth-child(3){text-align: right;}
+        .route ul li:nth-child(4) p{color: #BD0F72;}
+
+        .aud{display: flex; justify-content: space-between;}
+        .aud>div{flex-grow: 1;}
+    </style>
+    <table class="n_Table">
+        <thead>
+            <tr>
+                <td>Container (50)</td>
+                <td>Alert & Upcoming Deadline</td>
+                <td>Vessel / Voyage</td>
+                <td>Origin / Port of Loading <img class="t_arr" src="/img/s_arr.png"> Port of Discharging / Destination</td>
+            </tr> 
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><img src="/img/n_icon.png">번째 <img src="/img/wifi.png"></td>
+                <td>
+                    <div class="aud">
+                        <div>
+                            <div>123</div>
+                            <div>123213</div>
+                        </div>
+                        <div>
+                            -
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <p class="ntxt"><strong>UlSAN EXPRESS</strong></p>
+                    <p class="stxt ">0138</p>
+                </td>
+                <td class="route">
+                    <ul>
+                        <li>
+                            <p class="ntxt"><strong>HOCHIMINH,</strong> VIETNAM</p>
+                            <p class="stxt ">2022-09-22 04:35:00</p>
+                        </li>
+                        <li>
+                            <p class="ntxt"><strong>HOCHIMINH,</strong> VIETNAM</p>
+                            <p class="stxt"><img src="/img/pim.png"><strong>KEELUNG,</strong>, TW | 2022-10-18 11:06</p>
+                        </li>
+                        <li>
+                            <p class="ntxt"><strong>HOCHIMINH,</strong> VIETNAM</p>
+                            <p class="stxt">2022-09-22 04:35:00</p>
+                        </li>
+                        <li>
+                            <p class="btxt"><img src="/img/r_imfo.png "> Delayed</p>
+                            <p class="stxt">by 0d 8h 0m</p>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+       
+    </table>
 </body>
 </html>
