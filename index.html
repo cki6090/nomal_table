@@ -20,6 +20,8 @@
         
 
         .n_Table{border-collapse: collapse; width: 1650px; table-layout: fixed; margin: 100px auto; border: 1px solid #E0E0E0  ;}
+        .n_Table tr td:nth-child(1){width: 370px;}
+        .n_Table tr td:nth-child(2){width: 320px;}
         .n_Table tr td:nth-child(4){width: 875px;}
 
         .n_Table thead{ background: #F0F2F6;}
@@ -29,18 +31,55 @@
 
         
         .n_Table tbody{background: #ffffff;}
-        .n_Table tbody tr td{height: 80px; position: relative; padding: 0px 20px;}
+        .n_Table tbody tr td{height: 80px; position: relative; padding: 0px 20px; border-bottom: 1px solid #E0E0E0;}
         .route ul{ display: flex; justify-content: space-between; flex-wrap: wrap; }
         .route ul li p:nth-child(2){margin-top: 5px;}
         .route ul li:nth-child(2){text-align: center; background: url(/img/l_arr.png)no-repeat center 7px; width: 305px;}
         .route ul li:nth-child(2) p:nth-child(1){background: #ffffff;display: inline-block; padding: 0px 8px;} 
         .route ul li:nth-child(3){text-align: right;}
         .route ul li:nth-child(4) p{color: #BD0F72;}
+        .route ul li:nth-child(4) p:nth-child(2){margin-left: 20px;}
 
-        .aud{display: flex; justify-content: space-between;}
-        .aud>div{flex-grow: 1;}
+        .aud{display: flex; justify-content: space-between; align-items: center; gap: 5px;}
+        .aud>div>div{border-radius: 2px;display: inline-block; padding: 1px 7px; margin: 3px 0px; font-weight: 600; position: relative;} 
+        .aud>div .blue{background: #EFF6FF;border: 1px solid #60A5FA; color:#60A5FA ;}
+        .aud>div .green{background: #EFF6FF; border: 1px solid #34D399; color: #34D399;}
+        
+
+
+ .aud>div .blue:after,
+.aud>div .green:after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+
+        .aud>div .red{background: #FEF2F2; border: 1px solid #F87171; color:#F87171 ;}
+        .aud>div .orange{background: #FFFBEB; border: 1px solid #FBBF24; color:#FBBF24 ;}
+
+
+        .ctbg{position: absolute; top: 0px; left: 0px; background: #EF4444; opacity: 0.7; width: 5px; height: 100%;}
+        .Container{display: grid; grid-template-columns: 15px 1fr auto; grid-template-rows: 1fr 1fr; align-items: center;}
+        .Container>div:nth-child(1){grid-row: 1 / span 2; align-self: start; padding-top: 5px;}
+        .Container>div:nth-child(3){padding: 3.5px 8px; border: 1px solid #F1F3F6;border-radius: 2px;background: #F9F9F9;}
+        .Container>div:nth-child(4){grid-column: 2 / span 3;}
     </style>
+
+
     <table class="n_Table">
+        <colgroup>
+            <col width="370px" />
+            <col width="320px" />
+            <col width="190px" />
+            <col width="875px" />
+        </colgroup>
+
         <thead>
             <tr>
                 <td>Container (50)</td>
@@ -52,21 +91,31 @@
 
         <tbody>
             <tr>
-                <td><img src="/img/n_icon.png">번째 <img src="/img/wifi.png"></td>
+                <td>
+                    <div class="ctbg"></div>
+                    <div class="Container">
+                        <div><img src="/img/n_icon.png"></div>
+                        <div class="ntxt"><strong>CNTR1837373</strong> | 40’RF <img src="/img/wifi.png"></div>
+                        <div class="ntxt">BKG# <strong>SELCC9033300</strong></div>
+                        <div class="stxt">Bovine Meat Fresh / Chilled</div>
+                    </div>
+                </td>
+
                 <td>
                     <div class="aud">
                         <div>
-                            <div>123</div>
-                            <div>123213</div>
+                            <div class="blue">Retrun Air</div>
+                            <div class="green">Container Change</div>
                         </div>
                         <div>
-                            -
+                            <div class="red">Cargo Cut off</div>
+                            <div class="orange">Invoice Due Date</div>
                         </div>
                     </div>
                 </td>
                 <td>
                     <p class="ntxt"><strong>UlSAN EXPRESS</strong></p>
-                    <p class="stxt ">0138</p>
+                    <p class="stxt">0138</p>
                 </td>
                 <td class="route">
                     <ul>
