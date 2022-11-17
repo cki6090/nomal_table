@@ -11,70 +11,100 @@
 </head>
 <body>
     <style>
-        .route_tit{width: 546px; height: 50px;  margin: 0 auto 15px auto;background: #FFFFFF; position: relative;}
-        .route_tit::after{content: ""; position: absolute; bottom: -16px; right: 15px; background:#ffffff url(/img/route_list_boder.png)no-repeat center center; width: 20px; height: 15px;}
-        .route_list{width: 546px; margin: 0 auto;background: #FFFFFF;border: 1px solid #E1EEFC;border-radius: 8px;}
+        .route_tit{min-width: 546px; width: max-content; height: 50px;  margin: 0 auto 15px auto; background: #FFFFFF; position: relative;}
+        .route_tit::after{content: ""; position: absolute; bottom: -16px; right: 15px; background: url(/img/route_list_boder.svg)no-repeat center center; width: 20px; height: 7px; z-index: 31;}
+        .route_list{min-width: 546px; width: max-content; margin: 0 auto;background: #FFFFFF;border: 1px solid #EDEDED; border-radius: 8px; position: absolute;   top: 65px; left: 50%;  transform: translate(-50%, 0%); z-index: 30;}
+
         .route_list .rl_tit{padding:15px 0px 15px 20px; display: flex;justify-content: space-between;} 
 
-        .route_list .rl_list li,
+        .route_list .rl_list li div,
         .route_list .rl_tit div{color: #333333; font-weight: 500; font-size: 14px; vertical-align: middle;}
+        .route_list .rl_tit div{width:50%; position: relative;}
+        .route_list .rl_tit div .close{position: absolute; top: 0px; right: 10px;}
         .route_list .rl_tit:hover{background:rgb(189, 15, 114, 0.05)}
 
-        .route_list .rl_list li span,
+        .route_list .rl_list li div span,
         .route_list .rl_tit div span{font-weight: 400;margin-right:10px ;}
 
         .route_list .rll_tit img,
-        .route_list .rl_list li img,
+        .route_list .rl_list li div img,
         .route_list .rl_tit div img{ vertical-align: inherit; margin-bottom: 3px; margin-right:10px ;}
 
         .route_list .rl_list{padding:15px 20px; border-top: 1px solid #E0E0E0;}
         .route_list .rll_tit{font-weight: 600; font-size: 15px; color: #111111; margin-bottom: 15px;}
-        .route_list .rl_list li{ margin-bottom: 15px;}
+        .route_list .rl_list li{ margin-bottom: 15px;display: flex;justify-content: space-between; }
         .route_list .rl_list li:last-child{margin-bottom: 0px;}
+        .route_list .rl_list li div{width: 50%;}
+
+        .route_list .rl_tit div img.lc_img,
+        .route_list .rl_list li div img.lc_img{ margin-right:0px ;}
     </style>
     <div class="route_tit">
-        타이틀
-    </div>
-    <div class="route_list">
-        <div class="rl_tit">
-            <div>
-                <img src="/img/Star_off.png"> LONGIANO, <span>ITALY</span> <img src="/img/arr.png"> Shanghai, <span>China</span>
-            </div>
-            <div>
-                <img src="/img/close.png">
-            </div>
-        </div>
+        타이틀 아래에 리스트 넣어야해
 
-        <div class="rl_list">
-            <div class="rll_tit"><img src="/img/arr_up.png"> Favorites</div>
-            <div>
-                <ul>
-                    <li>
-                        <img src="/img/Star_on.png"> LONGIANO, <span>ITALY</span> <img src="/img/arr.png"> Shanghai, <span>China</span>
-                    </li>
-                    <li>
-                        <img src="/img/Star_on.png"> LONGIANO, <span>ITALY</span> <img src="/img/arr.png"> Shanghai, <span>China</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <div class="route_list">
+            <div class="rl_tit">
+                <div>
+                    <img src="/img/Star_off.png"> <img class="lc_img" src="/img/anchor.png"> LONGIANO, <span>ITALY</span> 
+                   
+                </div>
 
-        <div class="rl_list"> 
-            <div class="rll_tit"><img src="/img/arr_up.png"> Recents</div>
-            <div>
-                <ul>
-                    <li>
-                        <img src="/img/Star_off.png"> LONGIANO, <span>ITALY</span> <img src="/img/arr.png"> Shanghai,
-                        <span>China</span>
-                    </li>
-                    <li>
-                        <img src="/img/Star_on.png"> LONGIANO, <span>ITALY</span> <img src="/img/arr.png"> Shanghai,
-                        <span>China</span>
-                    </li>
-                </ul>
+                <div>
+                    <img src="/img/arr.png"> <img class="lc_img" src="/img/location_on.png"> Shanghai, <span>China</span>
+                    <img class="close" src="/img/close.png">
+                </div>
+            </div>
+        
+            <div class="rl_list">
+                <div class="rll_tit"><img src="/img/arr_up.png"> Favorites</div>
+                <div>
+                    <ul>
+                        <li>
+                           <div>
+                                <img src="/img/Star_off.png"> <img class="lc_img" src="/img/anchor.png"> LONGIANO, <span>ITALY</span>
+                           </div> 
+                            <div>
+                                <img src="/img/arr.png"> <img class="lc_img" src="/img/location_on.png"> Shanghai, <span>ChinaShanghai</span>
+                            </div>
+                        </li>
+                            <li>
+                                <div>
+                                    <img src="/img/Star_on.png"> <img class="lc_img" src="/img/location_on.png"> LONGIANO, <span>ITALY</span>
+                                </div>
+                                <div>
+                                    <img src="/img/arr.png"> <img class="lc_img" src="/img/location_on.png"> Shanghai, <span>ChinaShanghai</span>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="rl_list">
+                <div class="rll_tit"><img src="/img/arr_up.png"> Recents</div>
+                <div>
+                    <ul>
+                        <li>
+                            <div>
+                                <img src="/img/Star_on.png"> <img class="lc_img" src="/img/location_on.png"> LONGIANO, <span>ITALY</span>
+                            </div>
+                            <div>
+                                <img src="/img/arr.png"> <img class="lc_img" src="/img/location_on.png"> Shanghai, <span>ChinaShanghai</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/img/Star_on.png"> <img class="lc_img" src="/img/location_on.png"> LONGIANO, <span>ITALY</span>
+                            </div>
+                            <div>
+                                <img src="/img/arr.png"> <img class="lc_img" src="/img/location_on.png"> Shanghai, <span>ChinaShanghai</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+  
 
 
 
