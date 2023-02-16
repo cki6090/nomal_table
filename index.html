@@ -1,115 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/main.css" />
 
     <title>Document</title>
 </head>
+
 <body>
     <style>
-        .route_tit{min-width: 546px; width: max-content; height: 50px;  margin: 0 auto 15px auto; background: #FFFFFF; position: relative;}
-        .route_tit::after{content: ""; position: absolute; bottom: -16px; right: 15px; background: url(/img/route_list_boder.svg)no-repeat center center; width: 20px; height: 7px; z-index: 31;}
-        .route_list{min-width: 546px; width: max-content; margin: 0 auto;background: #FFFFFF;border: 1px solid #EDEDED; border-radius: 8px; position: absolute;   top: 65px; left: 50%;  transform: translate(-50%, 0%); z-index: 30;}
+        .route_tit {
+            min-width: 546px;
+            width: max-content;
+            height: 50px;
+            margin: 0 auto 15px auto;
+            background: #FFFFFF;
+            position: relative;
+        }
 
-        .route_list .rl_tit{padding:15px 20px; display: flex;justify-content: space-between; flex-wrap: wrap;width: 100%; box-sizing: border-box;} 
+        .route_tit::after {
+            content: "";
+            position: absolute;
+            bottom: -16px;
+            right: 15px;
+            background: url(/img/route_list_boder.svg)no-repeat center center;
+            width: 20px;
+            height: 7px;
+            z-index: 31;
+        }
+
+        .route_list {
+            min-width: 546px;
+            width: max-content;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border: 1px solid #EDEDED;
+            border-radius: 8px;
+            position: absolute;
+            top: 65px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            z-index: 30;
+        }
+
+        .route_list .rl_tit {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            box-sizing: border-box;
+        }
 
         .route_list .rl_list li div,
-        .route_list .rl_tit div{color: #333333; font-weight: 500; font-size: 14px; vertical-align: middle;}
-        .route_list .rl_tit div{width:50%; position: relative;}
-        .route_list .rl_tit div .close{position: absolute; top: 1px; right: -10px;}
-        .route_list .rl_tit:hover{background:rgb(189, 15, 114, 0.05); border-radius: 8px 8px 0px 0px;}
+        .route_list .rl_tit div {
+            color: #333333;
+            font-weight: 500;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        .route_list .rl_tit div {
+            width: 50%;
+            position: relative;
+        }
+
+        .route_list .rl_tit div .close {
+            position: absolute;
+            top: 1px;
+            right: -10px;
+        }
+
+        .route_list .rl_tit:hover {
+            background: rgb(189, 15, 114, 0.05);
+            border-radius: 8px 8px 0px 0px;
+        }
 
         .route_list .rl_list li div span,
-        .route_list .rl_tit div span{font-weight: 400;margin-right:10px ;}
+        .route_list .rl_tit div span {
+            font-weight: 400;
+            margin-right: 10px;
+        }
 
         .route_list .rll_tit img,
         .route_list .rl_list li div img,
-        .route_list .rl_tit div img{ vertical-align: inherit; margin-bottom: 3px; margin-right:10px ;}
+        .route_list .rl_tit div img {
+            vertical-align: inherit;
+            margin-bottom: 3px;
+            margin-right: 10px;
+        }
 
-        .route_list .rl_list{padding:15px 20px; border-top: 1px solid #E0E0E0; width: 100%;  box-sizing: border-box;}
-        .route_list .rll_tit{font-weight: 600; font-size: 15px; color: #111111; margin-bottom: 15px;}
-        .route_list .rl_list li{ margin-bottom: 15px;display: flex;justify-content: space-between; flex-wrap: wrap;}
-        .route_list .rl_list li:last-child{margin-bottom: 0px;}
-        .route_list .rl_list li div{width: 50%;}
+        .route_list .rl_list {
+            padding: 15px 20px;
+            border-top: 1px solid #E0E0E0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .route_list .rll_tit {
+            font-weight: 600;
+            font-size: 15px;
+            color: #111111;
+            margin-bottom: 15px;
+        }
+
+        .route_list .rl_list li {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .route_list .rl_list li:last-child {
+            margin-bottom: 0px;
+        }
+
+        .route_list .rl_list li div {
+            width: 50%;
+        }
 
         .route_list .rl_tit div img.lc_img,
-        .route_list .rl_list li div img.lc_img{ margin-right:0px ;}
+        .route_list .rl_list li div img.lc_img {
+            margin-right: 0px;
+        }
     </style>
-    <div class="route_tit">
-        타이틀 아래에 리스트 넣어야해
-        <div class="route_list">
 
-            <div class="rl_tit">
-                <div>
-                    <img src="/img/Star_off.png"> <img class="lc_img" src="/img/anchor.png"> LONGIANO, <span>ITALY</span> 
-                   
-                </div>
 
-                <div>
-                    <img src="/img/arr.png"> <img class="lc_img" src="/img/location_on.png"> Shanghai, <span>China</span>
-                    <img class="close" src="/img/close.png">
-                </div>
-            </div>
-        
-            <div class="rl_list">
-                <div class="rll_tit"><img src="/img/arr_up.png"> Favorites</div>
-                <div>
-                    <ul>
-                        <li>
-                           <div>
-                                <img src="/img/Star_off.png"> <img class="lc_img" src="/img/anchor.png"> LONGIANO, <span>ITALY</span>
-                           </div> 
-                            <div>
-                                <img src="/img/arr.png"> <img class="lc_img" src="/img/location_on.png"> Shanghai, <span>ChinaShanghai</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <img src="/img/Star_on.png"> <img class="lc_img" src="/img/location_on.png"> LONGIANO, <span>ITALY</span>
-                            </div>
-                            <div>
-                                <img src="/img/arr.png"> <img class="lc_img" src="/img/location_on.png"> Shanghai, <span>ChinaShanghai</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        
-            <div class="rl_list">
-                <div class="rll_tit"><img src="/img/arr_up.png"> Recents</div>
-                <div>
-                    <ul>
-                        <li>
-                            <div>
-                                <img src="/img/Star_on.png"> <img class="lc_img" src="/img/location_on.png"> LONGIANO, <span>ITALY</span>
-                            </div>
-                            <div>
-                                <img src="/img/arr.png"> <img class="lc_img" src="/img/location_on.png"> Shanghai, <span>ChinaShanghai</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <img src="/img/Star_on.png"> <img class="lc_img" src="/img/location_on.png"> LONGIANO, <span>ITALY</span>
-                            </div>
-                            <div>
-                                <img src="/img/arr.png"> <img class="lc_img" src="/img/location_on.png"> Shanghai, <span>ChinaShanghai</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-  
 
     <table class="n_Table">
-        
-        <colgroup>                                                                             
+
+        <colgroup>
             <col width="370px" />
             <col width="320px" />
             <col width="190px" />
@@ -121,11 +147,12 @@
                 <td>Container (50)</td>
                 <td>Alert & Upcoming Deadline</td>
                 <td>Vessel / Voyage</td>
-                <td>Origin / Port of Loading <img class="t_arr" src="/img/s_arr.png"> Port of Discharging / Destination</td>
-            </tr> 
+                <td>Origin / Port of Loading <img class="t_arr" src="/img/s_arr.png"> Port of Discharging / Destination
+                </td>
+            </tr>
         </thead>
- 
-        <tbody> 
+
+        <tbody>
             <tr>
                 <td>
                     <div class="ctbg"></div>
@@ -203,7 +230,7 @@
                                         <p>Return Air</p>
                                         <p>3.6 ℃</p>
                                     </div>
-                                 
+
                                     <div>
                                         <p>O₂</p>
                                         <p>8 %</p>
@@ -236,7 +263,7 @@
                             </div>
 
                             <div class="Chart_con">
-                                
+
                             </div>
                         </div>
 
@@ -257,7 +284,7 @@
 
                                         <div>Return air <img src="/img/thermometer.png"></div>
                                         <div>set : 3.6℃</div>
-                                        
+
                                         <div><span>↑ 2.2℃</span> above setpoint for <span>26 hours</span> </div>
                                         <div>2022/09/12 10:00 - 2022/09/13 24:00</div>
                                     </li>
@@ -266,10 +293,10 @@
                                         <div>
                                             <div class="circle pk">H2</div>
                                         </div>
-                                    
+
                                         <div>Humidity <img src="/img/humidity_mid.png"></div>
                                         <div>set : 3.6℃</div>
-                                    
+
                                         <div><span>↑ 2.2℃</span> above setpoint for <span>26 hours</span> </div>
                                         <div>2022/09/12 10:00 - 2022/09/13 24:00</div>
                                     </li>
@@ -278,10 +305,10 @@
                                         <div>
                                             <div class="circle bl">A1</div>
                                         </div>
-                                    
+
                                         <div>Humidity <img src="/img/CO2.png"></div>
                                         <div>set : 3.6℃</div>
-                                    
+
                                         <div><span>↑ 2.2℃</span> above setpoint for <span>26 hours</span> </div>
                                         <div>2022/09/12 10:00 - 2022/09/13 24:00</div>
                                     </li>
@@ -292,8 +319,9 @@
                 </td>
             </tr>
         </tbody>
-       
+
     </table>
 
 </body>
+
 </html>
